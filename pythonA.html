@@ -12,13 +12,106 @@
   <body>
 
 
-
-    <div class="container">
-      <div class="row">
-
+    <div class="container ">
+      <div class="row justify-content-center">
+        <h1><img src="Programming.png" width="100px" height="100px"/>
+        Python Program 1</h1>
       </div>
-  </div>
+      <div class="row justify-content-center">
 
+        <div class="col-sm-10">
+        <p>Python is one of the most widely used programming languages.   Python is also an interpreted language but you
+          usually write Python programs in a file (or many files, called <code>modules</code>) and run them without
+          typing in every command.</p>
+
+          <p> Python started as a language for hackers and made networking (like computers talking to each other over WiFi) easy
+            but now it's very popular with the "AI" crowd.</p>
+
+         <p>Let's write a "password" guessing program</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-sm-6">
+<pre>
+import sys
+
+thepassword = "purple"
+guessed = False
+
+while not guessed :
+   sys.stdout.write("Guess the password: ")
+   sys.stdout.flush()
+   word  = sys.stdin.readline()
+
+   if word.strip() == thepassword :
+       print("C'mon in.")
+       guessed = True
+   else :
+       if word[0] == thepassword[0] :
+          print("hmmm,  you got the first letter right, try again.")
+       else :
+          print("not even close.")
+          if len(word) == 0 :
+              break
+       #
+   #
+
+#
+
+if not guessed :
+    print("ok, so you give up.  Scram!")
+
+</pre>
+<a href="PYTHON/guess.py">CODE</a>
+</div>
+    <div class="col-sm-6">
+     <img src="PYTHON/python1.png" width=500/>
+
+    <br/><br/>
+    <h2>Programming Exercise #1:<h2>
+    <h3> Can you modify <a href="PYTHON/guess.py">guess.py</a> to change the guessing game?</h3>
+    <h3> Some ideas </h3>
+    <ul>
+      <li>Set the password when you start the program (use sys.argv)</li>
+      <li>Pick a random password from a <a href="PYTHON/names.txt">file full of words </a></li>
+    </ul>
+  </div>
+  </div>
+</div>
+
+<script>
+
+  function getRandomInt(max) {
+     return Math.floor(Math.random() * max);
+  }
+  var correct = getRandomInt(100)+1;
+
+  function guess() {
+
+    console.log("Correct", correct);
+    var input = document.getElementById("guess");
+
+    var guess = parseInt(input.value);
+
+    var output = document.getElementById("message");
+
+
+    if (guess == correct) {
+
+      output.innerHTML = "<B>Congrats! You guessed it!</b>";
+    }
+    else if ( guess > correct ) {
+      output.innerHTML = "Too high...";
+    }
+    else if ( guess < correct ) {
+      output.innerHTML = "Too low...";
+    }
+
+
+  };
+
+
+</script>
   </body>
 
 </html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+  <script>
+
+    function getRandomInt(max) {
+       return Math.floor(Math.random() * max);
+    }
+    var correct = getRandomInt(100)+1;
+
+    function guess() {
+
+      console.log("Correct", correct);
+      var input = document.getElementById("guess");
+
+      var guess = parseInt(input.value);
+
+      var output = document.getElementById("message");
+
+
+      if (guess == correct) {
+
+        output.innerHTML = "<B>Congrats! You guessed it!</b>";
+      }
+      else if ( guess > correct ) {
+        output.innerHTML = "Too high...";
+      }
+      else if ( guess < correct ) {
+        output.innerHTML = "Too low...";
+      }
+
+
+    };
+
+
+  </script>
+</head>
+<body>
+  <div style="padding: 50px;">
+    <p>I'm thinking of a number between 1 and 100.</p>
+
+    <p>  Guess a number:  <input type="text" id="guess" value="50"/>
+      <button onclick="guess()">Guess</button> </p>
+
+    <div id="message"></div>
+
+
+  </div>
+
+  </body>
+</html>

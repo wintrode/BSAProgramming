@@ -12,13 +12,132 @@
   <body>
 
 
-
-    <div class="container">
-      <div class="row">
-
+    <div class="container ">
+      <div class="row justify-content-center">
+        <h1><img src="Programming.png" width="100px" height="100px"/>
+        JavaScript Program 1</h1>
       </div>
-  </div>
+      <div class="row justify-content-center">
 
+        <div class="col-sm-10">
+        <p>JavaScript is a programming language for web pages.  If something moves, flashes, or changes on a web page,
+          it's probably JavaScript.  Javascript is also an interpreted language.  Your web browser is the interpreter.
+          If you put JavaScipt code in a web page (HTML file), your browse (Chrome, FireFox, Safari) will run it. </p>
+
+          <p> So... Javascript is something anyone with a computer can code without having to install any new software.
+            Let's try a guessing game program.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-sm-6">
+<pre>
+  &lt;html&gt;
+  &lt;body&gt;
+    &lt;div style="padding: 50px;"&gt;
+      &lt;p&gt;I'm thinking of a number between 1 and 100.&lt;/p&gt;
+
+      &lt;p&gt;  Guess a number:  &lt;input type="text" id="guess" value="50"/&gt;
+        &lt;button onclick="guess()"&gt;Guess&lt;/button&gt; &lt;/p&gt;
+
+      &lt;div id="message"&gt;&lt;/div&gt;
+
+
+    &lt;/div&gt;
+
+    &lt;script&gt;
+
+      function getRandomInt(max) {
+         return Math.floor(Math.random() * max);
+      }
+      var correct = getRandomInt(100)+1;
+
+      function guess() {
+
+        console.log("Correct", correct);
+        var input = document.getElementById("guess");
+
+        var guess = parseInt(input.value);
+
+        var output = document.getElementById("message");
+
+
+        if (guess == correct) {
+
+          output.innerHTML = "&lt;B&gt;Congrats! You guessed it!&lt;/b&gt;";
+        }
+        else if ( guess &gt; correct ) {
+          output.innerHTML = "Too high...";
+        }
+        else if ( guess &lt; correct ) {
+          output.innerHTML = "Too low...";
+        }
+
+
+      };
+
+
+    &lt;/script&gt;
+
+    &lt;/body&gt;
+  &lt;/html&gt;
+</pre>
+<a href="JAVASCRIPT/guess1.html">CODE</a>
+</div>
+        <div class="col-sm-6">
+          <body>
+            <div style="padding: 50px;">
+              <p>I'm thinking of a number between 1 and 100.</p>
+
+              <p>  Guess a number:  <input type="text" id="guess" value="50"/>
+                <button onclick="guess()">Guess</button> </p>
+
+              <div id="message"></div>
+
+
+            </div>
+        </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-sm-10">
+  <h2>Programming Exercise #1:<h2>
+    <h3> Can you modify <a href="JAVASCRIPT/guess1.html">guess1.html</a> to change the guessing game?</h3>
+</div>
+</div>
+
+<script>
+
+  function getRandomInt(max) {
+     return Math.floor(Math.random() * max);
+  }
+  var correct = getRandomInt(100)+1;
+
+  function guess() {
+
+    console.log("Correct", correct);
+    var input = document.getElementById("guess");
+
+    var guess = parseInt(input.value);
+
+    var output = document.getElementById("message");
+
+
+    if (guess == correct) {
+
+      output.innerHTML = "<B>Congrats! You guessed it!</b>";
+    }
+    else if ( guess > correct ) {
+      output.innerHTML = "Too high...";
+    }
+    else if ( guess < correct ) {
+      output.innerHTML = "Too low...";
+    }
+
+
+  };
+
+
+</script>
   </body>
 
 </html>

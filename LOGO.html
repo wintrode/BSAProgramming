@@ -18,7 +18,96 @@
         <h1><img src="Programming.png" width="100px" height="100px"/>
         LOGO the Turtle</h1>
       </div>
+      <div class="row justify-content-center">
+
+        <div class="col-sm-10">
+        <p>LOGO the language was created in the 1970s to teach programming.   Logo is a turtle that can be programmed to draw things.
+        A good introduciton with basic commands is on <a href="https://en.wikipedia.org/wiki/UCBLogo">Wikipedia</a> </p>
+
+        <p>LOGO is an interpred language.  Just type commands into the windows and tell the turtle what to do.</p>
+        <p> Let's start with a simple program that draws a square.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-sm-5">
+
+
+<pre>
+pencolor 2
+fd 100
+rt 90
+fd 100
+rt 90
+fd 100
+rt 90
+fd 100
+rt 90
+</pre>
+<a href="LOGO/square1.logo">square1.logo</a>
+        </div>
+
+        <div class="col-sm-5">
+          <p><img width=400 src="LOGO/logo1.png"/></p>
+        </div>
+</div>
+<br/>
+<div class="row justify-content-center">
+    <div class="col-sm-5">
+<p> That's too much typing.  Let's use a loop.  Which is <code>repeat</code> in LOGO.</p>
+
+<pre>
+clearscreen
+pencolor 2
+repeat 4 [fd 100 rt 100]
+</pre>
+    </div>
+    <div class="col-sm-5">
+    </div>
+ </div>
+<div class="row justify-content-center">
+    <div class="col-sm-5">
+<p> Let's give this code a name so we can re-use it.  In LOGO, functions look like this:</p>
+<pre>
+to SQUARE
+repeat 4 [fd 100 rt 90]
+end
+</pre>
+    </div>
+
+    <div class="col-sm-5">
+    </div>
+ </div>
+ <div class="row justify-content-center">
+     <div class="col-sm-5">
+ <p> Now we can draw as many squares as we want.  We'll just start a little higher,
+   using <code>penup</code> to make LOGO pick up his pen before we move and <code>pendown</code>
+   to put it back on the paper before we draw 9 squares.</p>
+
+ <pre>
+ clearscreen
+ penup
+ fd 50
+ pendown
+ repeat 9 [square rt 40]
+ </pre>
+ <a href="LOGO/square2.logo">square2.logo</a>
+
+</div>
+
+     <div class="col-sm-5">
+   <p><img width=400 src="LOGO/logo2.png"/></p>
+     </div>
   </div>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-10">
+    <h2>Programming Exercise #1:<h2>
+      <h3> Can you modify <a href="square2.logo">square2.logo</a> to draw another shape or shapes?</h3>
+  </div>
+  </div>
+
+</div>
+
 
   </body>
 

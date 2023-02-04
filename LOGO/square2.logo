@@ -1,0 +1,3 @@
+to SQUARE
+repeat 4 [fd 100 rt 90]
+end
