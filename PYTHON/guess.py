@@ -7,8 +7,12 @@ while not guessed :
    sys.stdout.write("Guess the password: ")
    sys.stdout.flush()
    word  = sys.stdin.readline()
-   
-   if word.strip() == thepassword :
+   word = word.strip() 
+
+   if len(word) == 0 :
+       break
+
+   if word == thepassword :
        print("C'mon in.")
        guessed = True
    else :
@@ -16,8 +20,6 @@ while not guessed :
           print("hmmm,  you got the first letter right, try again.")
        else :
           print("not even close.")
-          if len(word) == 0 :
-              break
        #
    #
 
