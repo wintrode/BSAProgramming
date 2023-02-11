@@ -12,13 +12,46 @@
   <body>
 
 
-
-    <div class="container">
-      <div class="row">
-
+    <div class="container ">
+      <div class="row justify-content-center">
+        <h1><img src="Programming.png" width="100px" height="100px"/>
+        C/C++ Program 2 and 3</h1>
       </div>
-  </div>
+      <div class="row justify-content-center">
 
+        <div class="col-sm-10">
+        <p>Java is a language very similar to C++ that was designed to be easy to run on different types
+          of computers.  Java is both compiled and interpreted.  You compile your Java code to what is called
+        <code>bytecode</code>.  The bytecode is <i>machine-independent</i>, which means it is not actual
+         machine instructions, like for a PC processor - the intel x86 or a phone processor - the ARM.  Java needs
+       another program, which is written in machine code, the Java interpreter, to run Java bytecode.  Confusing?  It is.  </p>
+
+           <p> Like C/C++ the basic way of writing Java programs is using a <code>text editor</code>.  You write your program code,
+             compile the code file, run the compiled program, see what happens, then write some more code, and repeat.</p>
+
+          <p> Using the <a href="JAVA/hello.java">Hello World</a> program, you will need a <code>command line</code> window.  Like DOS or
+            <code>cmd</code> in Windows, this lets you type commands (programs) and run them, instead of clicking on icons. </p>
+
+            <p> To compile C/C++ programs you use a program called <code>javac</code> - the <b>JAva</b> <b>c</b>ompiler.
+              The following commands compile the program in hello.cc and then run it. </p>
+
+<pre>
+  javac -cp JAVA JAVA/bsa/hello.java
+  java -cp JAVA bsa.hello
+</pre>
+
+           <p>In C/C++, re-usable code lives in <code>libraries</code>  like modules in python.
+             There are <code>libraries</code> for math, and text, and music, and images, and lots of other things.
+             The best way to learn is to look at examples. </p>
+
+          <ul>
+            <li> Fun with math: <a href="JAVA/bsa/estimate.java">estimate.java</a> </li>
+            <li> Fun with text : <a href="JAVA/bsa/eliza.java">eliza.java</a> </li>
+            <li> ??? </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
   </body>
-
 </html>
